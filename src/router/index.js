@@ -15,7 +15,6 @@ const Document = () => import('@/components/Document')
 const Foo = () => import('@/view/foo')
 // get和set的测试页面
 const getandset = () => import('@/view/Getandset')
-const Home = () => import('@/view/tab/Home')
 const Tab = () => import('@/view/tab/Tab')
 // 空容器
 const Layout = () => import('@/view/Layout')
@@ -44,7 +43,8 @@ const Simple = () => import('@/view/order/offer/Simple')
 
 const Swiper = () => import('@/view/order/Swiper')
 const Size = () => import('@/view/order/Size')
-
+const Home = () => import('@/page/home/Home')
+const List = () => import('@/page/home/List')
 Vue.use(VueRouter)
 const router = new VueRouter({
   mode: 'hash',
@@ -78,8 +78,8 @@ const router = new VueRouter({
     },
     {
       path: '/index',
-      name: 'index',
-      component: Index
+      name: 'Home',
+      component: Home
     },
     {
       path: '/quotation',
